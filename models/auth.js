@@ -52,6 +52,7 @@ router.get("/",function(req,res){
 
 
 router.post("/", function(req, res,next) {
+      console.log("coming here")
     const params = new URLSearchParams({
         secret: "6LczpV8pAAAAAOzQDn-CRm1sK2qc7piaYjIqa_ZH",
         response: req.body["g-recaptcha-response"]

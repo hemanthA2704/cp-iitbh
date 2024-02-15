@@ -411,6 +411,14 @@ app.post("/paymentDone",function(req,res){
     })
 });
 
+app.get('/logout', function(req, res, next) {
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      res.redirect('/');
+    });
+  });
+
+
 
 app.listen(3000 , function(){
     console.log("Server is running on port 3000 locally.");
