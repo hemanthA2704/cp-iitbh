@@ -320,6 +320,7 @@ body.activeTabCart .container{
 
 .newButton {
     position : relative ;
+    margin-top: 50px;
 }
 .checkoutLayout .form h1,
 .checkoutLayout .form .group:nth-child(-n+4){
