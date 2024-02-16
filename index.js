@@ -284,8 +284,14 @@ app.get("/nurse/:id",function(req,res){
 app.get("/nurse",function(req,res){
     if (!req.isAuthenticated()){
         res.redirect("/") ;
-    } else {
-        res.render("nurse")
+    } 
+    else {
+        if (req.user.type === "Staff"){
+            res.render("nurse")
+        }
+        else {
+            res.send("You are not authorized to access this page.")
+        }
     }
 })
 
